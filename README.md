@@ -6,15 +6,18 @@ Had 3 challenges.
 
 ### Student Grade Generator(Toy Problem)
 - where it was to write a code that prompts the user to input student marks. And it was to be graded as A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less than 40
+- Its aim is to run a code to calculate the grade.
 
 ### Speed Detector (Toy Problem)
 - where one should write a program that takes as input the speed of a car and should return "Ok" if it's less than 70 but if it is more, the return should be "License Suspended".
+- Its aim is to check speed and calculate it.
 
 ### Net Salary Calculator (Toy Problem)
 - where one should write a program that calculates one's individual salary by getting inputs of basic salary and benefits. What should be calculated are payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
 - One can use the information provided below:
    https://www.aren.co.ke/payroll/taxrates.htmLinks to an external site. 
-   https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye 
+   https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
+- Its aim is to calculate net salary over the years including the deductions.
 
 ## Project Setup 
 
