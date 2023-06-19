@@ -19,5 +19,5 @@ else {
 }
     
 }
-totalGrade(_grade)
+totalGrade(_grade);
 console.log(totalGrade(_grade))
