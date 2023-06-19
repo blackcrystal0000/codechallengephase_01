@@ -12,5 +12,5 @@ function scanSpeed(speed) {
     }
 }
 
-scanSpeed(speed);
+scanSpeed(speed)
 console.log(scanSpeed(speed))
