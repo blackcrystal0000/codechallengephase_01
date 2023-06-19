@@ -1,3 +1,27 @@
+//Tax rates
+
+ function calculateRateOfTax(AnnualTaxablePay) {
+
+    let rate = 0;
+
+     if (AnnualTaxablePay <= 288000) {
+
+      rate = 10% * 12;
+
+    } else if (AnnualTaxablePay >= 288001 && AnnualTaxablePay <= 388000) {
+
+      rate = 25% * 12;
+
+    } else if (AnnualTaxablePay > 388000) {
+
+      rate = 30% * 12;
+
+    }
+
+     return rate;
+
+  }
+
 //NHIF
 
 function calculateDeduction(grossPay) {
@@ -76,33 +100,9 @@ function calculateDeduction(grossPay) {
 
   //NSSF
 
-  function calculatePensionablePayTier(pay) {
+  function calculatePensionPayTiers(pay) {
 
-     return pay * 0.06
-
-  }
-
- //Tax rates
-
- function calculateTaxRate(monthlyTaxablePay) {
-
-    let rate = 0;
-
-     if (monthlyTaxablePay <= 24000) {
-
-      rate = 10;
-
-    } else if (monthlyTaxablePay >= 24001 && monthlyTaxablePay <= 32333) {
-
-      rate = 25;
-
-    } else if (monthlyTaxablePay > 32333) {
-
-      rate = 30;
-
-    }
-
-     return rate;
+     return pay * 6%
 
   }
 
@@ -110,33 +110,33 @@ function calculateDeduction(grossPay) {
 
     function calculateNetSalary(salary, benefits){
 
-    let monthlyTaxablePay = salary
+    let AnnualTaxablePay = salary
 
-    let deductTax = calculateTaxRate(monthlyTaxablePay)// %
+    let deductedTax = calculateTaxRate(AnnualTaxablePay)
 
-    let grossPay = salary - ((deductTax / 100) * salary)
+    let grossPay = salary - ((deductedTax / 100) * salary)
 
     let deductNhif = calculateDeduction(grossPay)
 
-    let pay = salary - ((deductTax / 100) * salary) - deductNhif
+    let pay = salary - ((deductedTax / 100) * salary) - deductsNhif
 
-    let deductNssf = calculatePensionablePayTier(pay)
+    let deductNssf = calculatePensionPayTier(pay)
 
-    let netSalaryCalculation = () =>{var netSalaryValue = (pay - deductNhif) ; return netSalaryValue}
+    let netSalaryCalculation = () =>{let netSalaryValue = (pay - deductsNhif) ; return netSalaryValue}
 
     let netSalary = netSalaryCalculation()
 
-    console.log(netSalary)
+    console.log(netSalary);
 
-     return netSalary
+     return netSalary;
 
     }
 
  
 
- let salary = parseInt("7000")// gross salsary
+ let salary = parseInt("7000")
 
- let benefits = parseInt("800")// benefits
+ let benefits = parseInt("800")
 
  calculateNetSalary(salary, benefits)
 
