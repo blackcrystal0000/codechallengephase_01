@@ -24,7 +24,7 @@
 
 //NHIF
 
-function calculateDeduction(grossPay) {
+function calculateTotalDeduction(grossPay) {
 
     let deduction = 0;
 
@@ -110,19 +110,19 @@ function calculateDeduction(grossPay) {
 
     function calculateNetSalary(salary, benefits){
 
-    let AnnualTaxablePay = salary
+    let AnnualTaxablePay = salary;
 
     let deductedTax = calculateTaxRate(AnnualTaxablePay)
 
     let grossPay = salary - ((deductedTax / 100) * salary)
 
-    let deductNhif = calculateDeduction(grossPay)
+    let deductNhif = calculateTotalDeduction(grossPay)
 
     let pay = salary - ((deductedTax / 100) * salary) - deductsNhif
 
-    let deductNssf = calculatePensionPayTier(pay)
+    let deductNssf = calculatePensionPayTiers(pay)
 
-    let netSalaryCalculation = () =>{let netSalaryValue = (pay - deductsNhif) ; return netSalaryValue}
+    let netSalaryCalculation = () =>{const netSalaryValue = (pay - deductsNhif) ; return netSalaryValue}
 
     let netSalary = netSalaryCalculation()
 
