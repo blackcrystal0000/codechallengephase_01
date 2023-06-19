@@ -3,6 +3,9 @@
  ## Description
 
 Had 3 challenges.
+It has the following programs
+1: JavaScript.
+2: HTML.
 
 ### Student Grade Generator(Toy Problem)
 - where it was to write a code that prompts the user to input student marks. And it was to be graded as A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less than 40
